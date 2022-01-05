@@ -10,7 +10,9 @@ services:
     ports:
       - 8004:8000
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/app
+      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/app
+      - AWSAccessKeyId=AKIAXY3YBGRPHVJ7JBYX
+      - AWSSecretKey=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
     depends_on:
       - db
 
